@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-// ===========================================header==============================================
+// ===========================================header================================================
 header  {
     @include flex-row-center;
     padding: $padding-Y - 35 $padding-X;
@@ -21,12 +21,12 @@ header  {
         color: $content-color;
         font-size: .8rem;
         font-weight: 500;
-        margin: 0 10px;
+        margin: 0 $margin-X - 10;
     }
 }
-// ===========================================/header==============================================
+// ===========================================/header===============================================
 
-// ===========================================main-sectiom=========================================
+// ===========================================main-sectiom==========================================
 .container-main-section {
     height: 90vh;
     background-image: url(../img/main-section-bg.jpg);
@@ -39,7 +39,7 @@ header  {
         white-space: pre;
     }
     .global-btn {
-        margin: 50px 0;
+        margin: $margin-Y +30 0;
     }
     .main-icon-wrap {
         @include flex-row-center;
@@ -49,7 +49,7 @@ header  {
             @include flex-colum-center;
             font-size: 1.1rem;
             i {
-                margin-bottom: 20px;
+                margin-bottom: $margin-Y;
                 font-size: 2.5rem;
                 }
             }
@@ -70,7 +70,7 @@ header  {
 .container-section-1 {
     height: 100vh;
     .picture-block-section-1 {
-        height: 75%;
+        height: 75vh;
         width: 30%;
         position: absolute;
         z-index: 0;
@@ -79,7 +79,6 @@ header  {
         @include bg-image;
     }
     .text-block-section-1 {
-        height: 60%;
         width: 40%;
         padding: $padding-Y $padding-X - 100;
         position: absolute;
@@ -87,7 +86,6 @@ header  {
         right: 17%;
         background-color: #fff;
         box-shadow: $box-shadow;
-        overflow: hidden;
         &:before {
             @include gradient;
         } 
@@ -96,10 +94,154 @@ header  {
             transform: translateX(0%);
         } 
         p {
-            margin-bottom: 20px;
+            margin-bottom: $margin-Y;
         }
     }
 }
+// ===========================================/section1=============================================
+
+// ===========================================section2==============================================
+.container-section-2 {
+    background-color: $bg-color;
+    .cards-wrapper_section-2 {
+        @include flex-wrap;
+        margin: $margin-Y + 30 0;
+        .cards_section-2 {
+            @include flex-colum-center;
+            text-align: center;
+            flex-basis: $flex-basis-X;
+            padding: $padding-Y - 30  $padding-X - 135 $padding-Y  $padding-X - 135;
+            box-shadow: $box-shadow;
+            i {
+                font-size: 2.2rem;
+                padding: $padding-Y - 20 0;
+            }
+            h3 {
+                margin-bottom: $margin-Y;
+            }
+        }
+        .card-1_cards_section-2 {
+            border-bottom: $border-bottom $brand-color1;
+            i {
+                color: $brand-color1;
+            }
+        }
+        .card-2_cards_section-2 {
+            border-bottom: $border-bottom $brand-color2;
+            i {
+                color: $brand-color2;
+            }
+        }
+        .card-3_cards_section-2 {
+            border-bottom: $border-bottom $brand-color3;
+            i {
+                color: $brand-color3;
+            }
+        }
+        .card-4_cards_section-2 {
+            border-bottom: $border-bottom $brand-color4;
+            i {
+                color: $brand-color4;
+            }
+        }
+    }
+}
+// ===========================================/section2=============================================
+
+// ===========================================section3==============================================
+.container-section-3 {
+    background-color: $bg-color-2;
+    h3 {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    i {
+        font-size: 3rem;
+        margin: $margin-Y +10 0;
+        color: $brand-color2;
+    }
+    span {
+        color: #fff;
+    }
+}
+// ===========================================/section3=============================================
+
+// ===========================================section4==============================================
+.cards-wrap_section-4 {
+    height: 110vh;
+    @include flex-wrap;
+    margin: $margin-Y + 20 0 ;
+    .img-holders {
+        flex-basis: $flex-basis-X + 9;
+        height: 34vh;
+        position: relative;
+        @include  bg-image
+    }
+    .img-holder-1 {
+        background-image: url(../img/1-item.png);
+    }
+    .img-holder-2 {
+        background-image: url(../img/2-item.png);
+    }
+    .img-holder-3 {
+        background-image: url(../img/3-item.png);
+    }
+    .img-holder-4 {
+        background-image: url(../img/4-item.png);
+    }
+    .img-holder-5 {
+        background-image: url(../img/5-item.png);
+    }
+    .img-holder-6 {
+        background-image: url(../img/6-item.png);
+    }
+    .img-holder-7 {
+        background-image: url(../img/7-item.png);
+    }
+    .img-holder-8 {
+        background-image: url(../img/8-item.png);
+    }
+    .img-holder-9 {
+        background-image: url(../img/9-item.png);
+    }
+    .fade_img-holders {
+        z-index: 1;
+        opacity: 0;
+        box-shadow: $box-shadow;
+        transition: all .60s;
+        i {
+            position: absolute;
+            font-size: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 30%;
+        }
+        .text-holder {
+           @include flex-colum-center;
+           width: 100%;
+           position: absolute;
+           bottom: 0;
+           background-color: #fff;
+           span {
+               color: $content-color;
+               padding: $padding-Y - 25 0;
+           }
+           &:after {
+               @include gradient;
+               z-index: 1;
+               top: 0;
+           }
+        }
+    }
+    .fade_img-holders:hover {
+        opacity: 1;
+    }
+}
+
+
+
+
+
     
 
 

@@ -24,9 +24,11 @@ $brand-color3: #b27cf5;
 $brand-color4: #feb960;
 
 $bg-color: #f7f7f7;
+$bg-color-2: #3f4049;
 $content-color: #272727;
 
 $box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.5);
+$border-bottom: 3px solid; 
 
 h2, h3 {
     color: $content-color;
@@ -41,6 +43,12 @@ p {
 $padding-Y: 50px;
 $padding-X: 150px;
 
+$margin-Y: 20px;
+$margin-X: 20px;
+
+$flex-basis-X: 23%;
+
+
 @mixin flex-colum-center {
     display: flex;
     flex-direction: column;
@@ -53,6 +61,13 @@ $padding-X: 150px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+ @mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 }
 
 @mixin  bg-image {
@@ -115,6 +130,8 @@ $padding-X: 150px;
     font-weight: 500;
     text-transform: uppercase;
 }
+
+
 
 
 

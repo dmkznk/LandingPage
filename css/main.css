@@ -206,7 +206,7 @@ header ul li a {
 }
 
 .container-section-1 .picture-block-section-1 {
-  height: 75%;
+  height: 75vh;
   width: 30%;
   position: absolute;
   z-index: 0;
@@ -218,7 +218,6 @@ header ul li a {
 }
 
 .container-section-1 .text-block-section-1 {
-  height: 60%;
   width: 40%;
   padding: 50px 50px;
   position: absolute;
@@ -227,7 +226,6 @@ header ul li a {
   background-color: #fff;
   -webkit-box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
 }
 
 .container-section-1 .text-block-section-1:before {
@@ -250,5 +248,225 @@ header ul li a {
 
 .container-section-1 .text-block-section-1 p {
   margin-bottom: 20px;
+}
+
+.container-section-2 {
+  background-color: #f7f7f7;
+}
+
+.container-section-2 .cards-wrapper_section-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.container-section-2 .cards-wrapper_section-2 .cards_section-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
+  padding: 20px 15px 50px 15px;
+  -webkit-box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.container-section-2 .cards-wrapper_section-2 .cards_section-2 i {
+  font-size: 2.2rem;
+  padding: 30px 0;
+}
+
+.container-section-2 .cards-wrapper_section-2 .cards_section-2 h3 {
+  margin-bottom: 20px;
+}
+
+.container-section-2 .cards-wrapper_section-2 .card-1_cards_section-2 {
+  border-bottom: 3px solid #fc5f45;
+}
+
+.container-section-2 .cards-wrapper_section-2 .card-1_cards_section-2 i {
+  color: #fc5f45;
+}
+
+.container-section-2 .cards-wrapper_section-2 .card-2_cards_section-2 {
+  border-bottom: 3px solid #38c695;
+}
+
+.container-section-2 .cards-wrapper_section-2 .card-2_cards_section-2 i {
+  color: #38c695;
+}
+
+.container-section-2 .cards-wrapper_section-2 .card-3_cards_section-2 {
+  border-bottom: 3px solid #b27cf5;
+}
+
+.container-section-2 .cards-wrapper_section-2 .card-3_cards_section-2 i {
+  color: #b27cf5;
+}
+
+.container-section-2 .cards-wrapper_section-2 .card-4_cards_section-2 {
+  border-bottom: 3px solid #feb960;
+}
+
+.container-section-2 .cards-wrapper_section-2 .card-4_cards_section-2 i {
+  color: #feb960;
+}
+
+.container-section-3 {
+  background-color: #3f4049;
+}
+
+.container-section-3 h3 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.container-section-3 i {
+  font-size: 3rem;
+  margin: 30px 0;
+  color: #38c695;
+}
+
+.container-section-3 span {
+  color: #fff;
+}
+
+.cards-wrap_section-4 {
+  height: 110vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.cards-wrap_section-4 .img-holders {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  height: 34vh;
+  position: relative;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cards-wrap_section-4 .img-holder-1 {
+  background-image: url(../img/1-item.png);
+}
+
+.cards-wrap_section-4 .img-holder-2 {
+  background-image: url(../img/2-item.png);
+}
+
+.cards-wrap_section-4 .img-holder-3 {
+  background-image: url(../img/3-item.png);
+}
+
+.cards-wrap_section-4 .img-holder-4 {
+  background-image: url(../img/4-item.png);
+}
+
+.cards-wrap_section-4 .img-holder-5 {
+  background-image: url(../img/5-item.png);
+}
+
+.cards-wrap_section-4 .img-holder-6 {
+  background-image: url(../img/6-item.png);
+}
+
+.cards-wrap_section-4 .img-holder-7 {
+  background-image: url(../img/7-item.png);
+}
+
+.cards-wrap_section-4 .img-holder-8 {
+  background-image: url(../img/8-item.png);
+}
+
+.cards-wrap_section-4 .img-holder-9 {
+  background-image: url(../img/9-item.png);
+}
+
+.cards-wrap_section-4 .fade_img-holders {
+  z-index: 1;
+  opacity: 0;
+  -webkit-box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .60s;
+  transition: all .60s;
+}
+
+.cards-wrap_section-4 .fade_img-holders i {
+  position: absolute;
+  font-size: 3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 30%;
+}
+
+.cards-wrap_section-4 .fade_img-holders .text-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.cards-wrap_section-4 .fade_img-holders .text-holder span {
+  color: #272727;
+  padding: 25px 0;
+}
+
+.cards-wrap_section-4 .fade_img-holders .text-holder:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, #fc5f45), color-stop(25%, #38c695), color-stop(50%, #38c695), color-stop(50%, #b27cf5), color-stop(75%, #b27cf5), color-stop(75%, #feb960));
+  background: linear-gradient(90deg, #fc5f45 25%, #38c695 25%, #38c695 50%, #b27cf5 50%, #b27cf5 75%, #feb960 75%);
+  z-index: 1;
+  top: 0;
+}
+
+.cards-wrap_section-4 .fade_img-holders:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
