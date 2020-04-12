@@ -1,0 +1,110 @@
+@import "./common";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+// ===========================================header==============================================
+header  {
+    @include flex-row-center;
+    padding: $padding-Y - 35 $padding-X;
+    .logo {
+        font-family: 'Petit Formal Script', cursive;
+        flex-grow: 1;
+        font-size: 1.4rem;
+        line-height: 100%;
+    }
+    .logo > span {
+        color: $brand-color1;
+    }
+    ul li a {
+        color: $content-color;
+        font-size: .8rem;
+        font-weight: 500;
+        margin: 0 10px;
+    }
+}
+// ===========================================/header==============================================
+
+// ===========================================main-sectiom=========================================
+.container-main-section {
+    height: 90vh;
+    background-image: url(../img/main-section-bg.jpg);
+    @include bg-image;
+     justify-content: center;
+    h1 {
+        font-size: 3rem;
+        font-weight: 400;
+        color: #fff;
+        white-space: pre;
+    }
+    .global-btn {
+        margin: 50px 0;
+    }
+    .main-icon-wrap {
+        @include flex-row-center;
+        justify-content: space-around;
+        width: 60%;
+        .main-icon-content {
+            @include flex-colum-center;
+            font-size: 1.1rem;
+            i {
+                margin-bottom: 20px;
+                font-size: 2.5rem;
+                }
+            }
+    }
+        .brand-color2 {
+            color: $brand-color2;
+        }
+        .brand-color3 {
+            color: $brand-color3;
+        }
+        .brand-color4 {
+            color: $brand-color4;
+        }
+}
+// ===========================================/main-section=========================================
+
+// ===========================================section1==============================================
+.container-section-1 {
+    height: 100vh;
+    .picture-block-section-1 {
+        height: 75%;
+        width: 30%;
+        position: absolute;
+        z-index: 0;
+        left: 17%;
+        background-image: url(../img/section-1.jpg);
+        @include bg-image;
+    }
+    .text-block-section-1 {
+        height: 60%;
+        width: 40%;
+        padding: $padding-Y $padding-X - 100;
+        position: absolute;
+        z-index: 1;
+        right: 17%;
+        background-color: #fff;
+        box-shadow: $box-shadow;
+        overflow: hidden;
+        &:before {
+            @include gradient;
+        } 
+        .global-title-numbers {
+            left: 0;
+            transform: translateX(0%);
+        } 
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}
+    
+
+
+    
+        
+    
+
+

@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 17px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+$brand-color1: #fc5f45;
+$brand-color2: #38c695;
+$brand-color3: #b27cf5;
+$brand-color4: #feb960;
+
+$bg-color: #f7f7f7;
+$content-color: #272727;
+
+$box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.5);
+
+h2, h3 {
+    color: $content-color;
+    margin: 0;
+}
+
+p {
+    color: $content-color;
+    margin: 0;
+}
+
+$padding-Y: 50px;
+$padding-X: 150px;
+
+@mixin flex-colum-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin  bg-image {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin gradient {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, $brand-color1 25%, $brand-color2 25%, $brand-color2 50%, $brand-color3 50%, $brand-color3 75%, $brand-color4 75%);
+}
+
+.container {
+    @include flex-colum-center;
+    position: relative;
+    padding: $padding-Y $padding-X;
+    z-index: 1;
+}
+
+.fade {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(000, 000, 000, .4);
+}
+
+.global-title {
+    font-size: 1.3rem;
+    padding: $padding-Y 0 $padding-Y - 20 0;
+    
+}
+
+.global-title-numbers {
+    font-size: 10.5rem;
+    font-weight: 900;
+    line-height: 83%;
+    color: #f0f0f0;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.global-btn {
+    background-color: $brand-color1;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: .8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
