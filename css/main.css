@@ -89,6 +89,68 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.menu-colum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all .45s;
+  transition: all .45s;
+}
+
+.menu-colum ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu-colum ul li {
+  margin: 5px;
+  font-size: 2rem;
+}
+
+.menu-colum.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-open {
+  cursor: pointer;
+  z-index: 999999;
+}
+
+.body-overflow {
+  overflow: hidden;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,25 +471,62 @@ header ul li a {
   background-image: url(../img/9-item.png);
 }
 
-.cards-wrap_section-4 .fade_img-holders {
-  z-index: 1;
+.cards-wrap_section-4 .cards-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
   opacity: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   -webkit-box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  -webkit-transition: all .60s;
-  transition: all .60s;
+  -webkit-transition: opacity .45s;
+  transition: opacity .45s;
 }
 
-.cards-wrap_section-4 .fade_img-holders i {
-  position: absolute;
+.cards-wrap_section-4 .cards-link .fade-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+  width: 100%;
+}
+
+.cards-wrap_section-4 .cards-link .fade-wrapper .fade {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards-wrap_section-4 .cards-link .fade-wrapper .fade i {
   font-size: 3rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 30%;
 }
 
-.cards-wrap_section-4 .fade_img-holders .text-holder {
+.cards-wrap_section-4 .cards-link .text-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -442,17 +541,16 @@ header ul li a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  position: absolute;
-  bottom: 0;
   background-color: #fff;
+  position: relative;
 }
 
-.cards-wrap_section-4 .fade_img-holders .text-holder span {
+.cards-wrap_section-4 .cards-link .text-holder span {
   color: #272727;
   padding: 25px 0;
 }
 
-.cards-wrap_section-4 .fade_img-holders .text-holder:after {
+.cards-wrap_section-4 .cards-link .text-holder:after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -466,7 +564,7 @@ header ul li a {
   top: 0;
 }
 
-.cards-wrap_section-4 .fade_img-holders:hover {
+.cards-wrap_section-4 .cards-link:hover {
   opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

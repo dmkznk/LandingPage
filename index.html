@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./pictures_js/pictureJs.css">
+
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 </head>
 <body>
+
     <!-- ===========================================header============================================== -->
     <header>
+        <span class="menu-open" id="menuBtn">Open</span>
+
         <span class="logo"><span>A</span>lexix</span>
         <nav>
             <ul>
@@ -28,6 +34,21 @@
             </ul>
         </nav>
     </header>
+
+    <div class="menu-colum" id="menu-colum">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Focus</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Our Team </a></li>
+                <li><a href="#">Work Steps</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </div>
+
     <!-- ===========================================/header============================================== -->
 
     <!-- ===========================================main-sectiom========================================= -->
@@ -136,116 +157,144 @@
             <h2>Portfolio</h2>
         </div>
         <p>We understand your requirement and provide quality works</p>
+        
         <div class="cards-wrap_section-4">
-            <div class="img-holders img-holder-1 ">
-               <a href="#">
-                   <div class="fade fade_img-holders">
-                    <i class="fas fa-plus-circle"></i>
+
+            <div class="img-holders img-holder-1">
+                <a class="cards-link" href="./img/1-item.png" data-picture-js="gallery1">
+                    <div class="fade-wrapper">
+                        <div class="fade">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+
+                    </div>
                     <div class="text-holder">
                         <span>Project One</span>
                     </div>
-                   </div>
-               </a>
+                </a>
             </div>
 
             <div class="img-holders img-holder-2">
-                <a href="#">
-                    <div class="fade fade_img-holders">
-                     <i class="fas fa-plus-circle"></i>
-                     <div class="text-holder">
-                         <span>Project Two</span>
-                     </div>
+                <a class="cards-link" href="./img/2-item.png" data-picture-js="gallery1">
+                    <div class="fade-wrapper">
+                        <div class="fade">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="text-holder">
+                        <span>Project One</span>
                     </div>
                 </a>
             </div>
 
             <div class="img-holders img-holder-3">
-                <a href="#">
-                    <div class="fade fade_img-holders">
-                     <i class="fas fa-plus-circle"></i>
-                     <div class="text-holder">
-                         <span>Project Three</span>
-                     </div>
+                <a class="cards-link" href="./img/3-item.png" data-picture-js="gallery1">
+                    <div class="fade-wrapper">
+                        <div class="fade">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="text-holder">
+                        <span>Project One</span>
                     </div>
                 </a>
             </div>
+
 
             <div class="img-holders img-holder-4">
-                <a href="#">
-                    <div class="fade fade_img-holders">
-                     <i class="fas fa-plus-circle"></i>
-                     <div class="text-holder">
-                         <span>Project Four</span>
-                     </div>
+                <a class="cards-link" href="./img/4-item.png" data-picture-js="gallery1">
+                    <div class="fade-wrapper">
+                        <div class="fade">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="text-holder">
+                        <span>Project One</span>
+                    </div>
+                </a>
+            </div>
+     
+            <div class="img-holders img-holder-5">
+                <a class="cards-link" href="./img/5-item.png" data-picture-js="gallery1">
+                    <div class="fade-wrapper">
+                        <div class="fade">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="text-holder">
+                        <span>Project One</span>
                     </div>
                 </a>
             </div>
 
-            <div class="img-holders img-holder-5">
-                <a href="#">
-                    <div class="fade fade_img-holders">
-                     <i class="fas fa-plus-circle"></i>
-                     <div class="text-holder">
-                         <span>Project Five</span>
-                     </div>
-                    </div>
-                </a>
-            </div>
 
             <div class="img-holders img-holder-6">
-                <a href="#">
-                    <div class="fade fade_img-holders">
-                     <i class="fas fa-plus-circle"></i>
-                     <div class="text-holder">
-                         <span>Project Six</span>
-                     </div>
+                <a class="cards-link" href="./img/6-item.png" data-picture-js="gallery1">
+                    <div class="fade-wrapper">
+                        <div class="fade">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="text-holder">
+                        <span>Project One</span>
                     </div>
                 </a>
             </div>
 
             <div class="img-holders img-holder-7">
-                <a href="#">
-                    <div class="fade fade_img-holders">
-                     <i class="fas fa-plus-circle"></i>
-                     <div class="text-holder">
-                         <span>Project Seven</span>
-                     </div>
+                <a class="cards-link" href="./img/7-item.png" data-picture-js="gallery1">
+                    <div class="fade-wrapper">
+                        <div class="fade">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="text-holder">
+                        <span>Project One</span>
                     </div>
                 </a>
             </div>
 
             <div class="img-holders img-holder-8">
-                <a href="#">
-                    <div class="fade fade_img-holders">
-                     <i class="fas fa-plus-circle"></i>
-                     <div class="text-holder">
-                         <span>Project Eight</span>
-                     </div>
+                <a class="cards-link" href="./img/8-item.png" data-picture-js="gallery1">
+                    <div class="fade-wrapper">
+                        <div class="fade">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="text-holder">
+                        <span>Project One</span>
                     </div>
                 </a>
             </div>
 
             <div class="img-holders img-holder-9">
-                <a href="#">
-                    <div class="fade fade_img-holders">
-                     <i class="fas fa-plus-circle"></i>
-                     <div class="text-holder">
-                         <span>Project Nine</span>
-                     </div>
+                <a class="cards-link" href="./img/9-item.png" data-picture-js="gallery1">
+                    <div class="fade-wrapper">
+                        <div class="fade">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="text-holder">
+                        <span>Project One</span>
                     </div>
                 </a>
+            </div>
+
             </div>
 
         </div>
 
     </div>
 
-
-
-
-
-
-
-    
+    <script src="./scriptJS.js"></script>
+    <script src="./pictures_js/pictureJs.js"></script>
 </body>
 </html>

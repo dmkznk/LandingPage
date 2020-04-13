@@ -3,6 +3,42 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+// mobile-menu
+.menu-colum {
+    @include flex-colum-center;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(300%);
+    background-color: rgba(000, 000, 000, .6);
+    transition: all .45s;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        li {
+            margin: 5px;
+            font-size: 2rem;
+        }
+    }
+}
+.menu-colum.active {
+    transform: translateX(0);
+}
+.menu-open {
+    cursor: pointer;
+    z-index: 999999;
+}
+
+.body-overflow {
+    overflow: hidden;
+}
+
+// /mobile-menu
 
 // ===========================================header================================================
 header  {
@@ -175,7 +211,7 @@ header  {
         flex-basis: $flex-basis-X + 9;
         height: 34vh;
         position: relative;
-        @include  bg-image
+        @include  bg-image;
     }
     .img-holder-1 {
         background-image: url(../img/1-item.png);
@@ -204,24 +240,33 @@ header  {
     .img-holder-9 {
         background-image: url(../img/9-item.png);
     }
-    .fade_img-holders {
-        z-index: 1;
+    .cards-link {
+        @include flex-colum-center;
+        position: absolute;
         opacity: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
         box-shadow: $box-shadow;
-        transition: all .60s;
-        i {
-            position: absolute;
-            font-size: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 30%;
+        transition: opacity .45s;
+        .fade-wrapper {
+            flex-grow: 1;
+            position: relative;
+            width: 100%;
+            .fade {
+                z-index: 1;
+                @include flex-row-center;
+                i {
+                font-size: 3rem;
+            }
+            }
         }
         .text-holder {
            @include flex-colum-center;
            width: 100%;
-           position: absolute;
-           bottom: 0;
            background-color: #fff;
+           position: relative;
            span {
                color: $content-color;
                padding: $padding-Y - 25 0;
@@ -233,7 +278,8 @@ header  {
            }
         }
     }
-    .fade_img-holders:hover {
+
+    .cards-link:hover {
         opacity: 1;
     }
 }

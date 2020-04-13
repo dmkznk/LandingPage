@@ -1,0 +1,55 @@
+/* fade */
+.fade-picture-JS {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -9;
+  transition: all .45s ease;
+}
+
+.fade-picture-JS.active {
+  z-index: 9999;
+  background: rgba(0, 0, 0, .8);
+  opacity: 1;
+}
+/* /fade */
+
+/* counter */
+.counter-picture-JS {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px;
+}
+/* /counter */
+
+
+/* arrows */
+.picture-JS-left {
+  position: absolute;
+  overflow: hidden;
+  left: 2%;
+  font-size: 2rem;
+  cursor: pointer;
+  color: orange;
+  padding: 20px;
+}
+
+.picture-JS-right {
+  position: absolute;
+  right: 2%;
+  font-size: 2rem;
+  cursor: pointer;
+  color: orange;
+  padding: 20px;
+  transform: rotate(-180deg);
+}
+/* /arrows */
