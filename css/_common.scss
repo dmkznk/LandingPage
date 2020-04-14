@@ -48,7 +48,6 @@ $margin-X: 20px;
 
 $flex-basis-X: 23%;
 
-
 @mixin flex-colum-center {
     display: flex;
     flex-direction: column;
@@ -107,7 +106,6 @@ $flex-basis-X: 23%;
 .global-title {
     font-size: 1.3rem;
     padding: $padding-Y 0 $padding-Y - 20 0;
-    
 }
 
 .global-title-numbers {

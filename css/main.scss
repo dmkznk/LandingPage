@@ -5,7 +5,6 @@ body {
 }
 // mobile-menu
 .menu-colum {
-    @include flex-colum-center;
     position: fixed;
     z-index: 99;
     left: 0;
@@ -31,13 +30,11 @@ body {
 }
 .menu-open {
     cursor: pointer;
-    z-index: 999999;
+    z-index: 999;
 }
-
 .body-overflow {
     overflow: hidden;
 }
-
 // /mobile-menu
 
 // ===========================================header================================================
@@ -52,6 +49,9 @@ header  {
     }
     .logo > span {
         color: $brand-color1;
+    }
+    ul {
+        @include flex-row-center;
     }
     ul li a {
         color: $content-color;
@@ -142,7 +142,7 @@ header  {
     .cards-wrapper_section-2 {
         @include flex-wrap;
         margin: $margin-Y + 30 0;
-        .cards_section-2 {
+        .cards_section-2  {
             @include flex-colum-center;
             text-align: center;
             flex-basis: $flex-basis-X;
@@ -156,25 +156,25 @@ header  {
                 margin-bottom: $margin-Y;
             }
         }
-        .card-1_cards_section-2 {
+        .card-1_cards_section-2  {
             border-bottom: $border-bottom $brand-color1;
             i {
                 color: $brand-color1;
             }
         }
-        .card-2_cards_section-2 {
+        .card-2_cards_section-2  {
             border-bottom: $border-bottom $brand-color2;
             i {
                 color: $brand-color2;
             }
         }
-        .card-3_cards_section-2 {
+        .card-3_cards_section-2  {
             border-bottom: $border-bottom $brand-color3;
             i {
                 color: $brand-color3;
             }
         }
-        .card-4_cards_section-2 {
+        .card-4_cards_section-2  {
             border-bottom: $border-bottom $brand-color4;
             i {
                 color: $brand-color4;
@@ -283,6 +283,171 @@ header  {
         opacity: 1;
     }
 }
+// ===========================================/section4=============================================
+
+// ===========================================section5==============================================
+.container-section-5 {
+    background-color: $bg-color;
+    .cards-wrapper_section-5 {   
+        @include flex-wrap;
+        margin: $margin-Y + 30 0;
+        .cards_section-5 {
+            @include flex-colum-center;
+            flex-basis: $flex-basis-X;
+            box-shadow: $box-shadow;
+            .team-member-avatar {
+                height: 30vh;
+                width: 100%;
+                @include bg-image;
+            }
+            .team-member-avatar-1 {
+                background-image: url(../img/avatar-1.jpg);
+            }
+            .team-member-avatar-2 {
+                background-image: url(../img/avatar-2.jpg);
+            }
+            .team-member-avatar-3 {
+                background-image: url(../img/avatar-3.jpg);
+            }
+            .team-member-avatar-4 {
+                background-image: url(../img/avatar-4.jpg);
+            }
+            .team-member-name-wrap {
+                @include flex-colum-center;
+                width: 100%;
+                padding: $padding-Y - 35 0;
+                background-color: #fff;
+                span:first-child {
+                    font-size: 1.2rem;
+                    margin-bottom: $margin-Y - 15;
+                }
+                span:last-child {
+                    font-size: .8rem;
+                }
+            }
+            .team-member-name-wrap_color-1 {
+                border-bottom: $border-bottom $brand-color1;
+                span:first-child {
+                    color: $brand-color1;
+                }
+                
+            }
+            .team-member-name-wrap_color-2 {
+                border-bottom: $border-bottom $brand-color2;
+                span:first-child {
+                    color: $brand-color2;
+                }
+                
+            }
+            .team-member-name-wrap_color-3 {
+                border-bottom: $border-bottom $brand-color3;
+                span:first-child {
+                    color: $brand-color3;
+                }
+                
+            }
+            .team-member-name-wrap_color-4 {
+                border-bottom: $border-bottom $brand-color4;
+                span:first-child {
+                    color: $brand-color4;
+                }
+                
+            }
+
+        }
+    }
+
+    .about-members-wrapper {
+        perspective: 500px;
+        position: relative;
+        background: #fff;
+        min-height: 20vw;
+        width: 100%;
+        box-shadow: $box-shadow;
+        .about-members  {
+            position: absolute;
+            padding: 50px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            // background: #fff;
+            display: flex;
+            .text-block  {
+                position: relative;
+                @include flex-colum-center;
+                align-items: flex-start;
+                h3 {
+                    position: absolute;
+                    top: 0px;
+                    font-size: 1.6rem;
+                  }
+                p {
+                    width: 75%;
+                }
+                
+            }
+              .links-block {
+                white-space: nowrap;
+                @include flex-colum-center;
+                position: relative;
+                &-icon-before {
+                  font-size: 2rem;
+                  position: absolute; 
+                  left: -100%;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+                ul {
+                  position: relative;
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    background: $content-color;
+                    opacity: .3;
+                    width: 2px;
+                    top: -5px;
+                    bottom: -5px;
+                    left: -20px;
+                  }
+                  li:nth-child(2n) {
+                    margin: 7px 0;
+                  }
+                  a {
+                      color: $content-color;
+                  }
+                }
+              }
+        }
+
+        .about-member-1 {
+            color: $brand-color1;
+        }
+        .about-member-2  {
+            color: $brand-color2;
+        }
+        .about-member-3  {
+            color: $brand-color3;
+        }
+        .about-member-4  {
+            color: $brand-color4;
+        }
+    }
+}
+
+.about-members {
+    transform: rotateX(180deg);
+    transition: all .55s ease-in-out;
+	opacity: 0;
+    background-color: black;
+}
+.about-members.active {
+    transform: rotateX(0);
+	opacity:1;
+    background: #fff
+}
+
+
 
 
 
