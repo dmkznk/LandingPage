@@ -358,7 +358,6 @@ header  {
     }
 
     .about-members-wrapper {
-        perspective: 500px;
         position: relative;
         background: #fff;
         min-height: 20vw;
@@ -436,16 +435,240 @@ header  {
 }
 
 .about-members {
-    transform: rotateX(180deg);
-    transition: all .55s ease-in-out;
+    transform: scale(.1, .1);
+    transition: all 1s ease-in-out;
 	opacity: 0;
     background-color: black;
 }
 .about-members.active {
-    transform: rotateX(0);
+    transform: scale(1, 1);
 	opacity:1;
     background: #fff
 }
+// ===========================================/section5==============================================
+
+// ===========================================section6===============================================
+.container-section-6 {
+    background-image: url(../img/coffe.png);
+    @include bg-image;
+    .icon-wrapper_section-6 {
+        @include flex-wrap;
+        justify-content: space-between;
+        width: 100%;
+        .icon-blocks {
+            flex-basis: $flex-basis-X;
+            @include flex-colum-center;
+            i:nth-child(1) {
+                font-size: 2.2rem;
+                margin-bottom: $margin-Y;
+            }
+            span:nth-child(2) {
+                 color: #fff;
+            }
+            span:nth-child(3) {
+            font-size: .8rem;
+            margin: $margin-Y 0;
+            color:#BDBDBF; 
+            }
+        }
+        .icon-block-1 {
+            color: $brand-color1;
+        }
+        .icon-block-2 {
+            color: $brand-color2;
+        }
+        .icon-block-3 {
+            color: $brand-color3;
+        }
+        .icon-block-4 {
+            color: $brand-color4;
+        }
+    }
+}
+// ===========================================/section6==============================================
+
+// ===========================================section7===============================================
+.wrapper-section-7 {
+    @include flex-colum-center;
+    justify-content: center;
+    padding-top: $padding-Y + 50;
+    .img-holders {
+        height: 30vh;
+        width: 30vw;
+        @include bg-image;
+        position: relative;
+        margin-bottom: $margin-Y - 10;
+    }
+    .img-holder-1 {
+        background-image: url(../img/understanding.jpg);
+        & .text-holder {
+            border-bottom: $border-bottom $brand-color1;
+        }
+    }
+    .img-holder-2 {
+        background-image: url(../img/planing.jpg);
+        & .text-holder {
+            border-bottom: $border-bottom $brand-color2;
+        }
+    }
+    .img-holder-3 {
+        background-image: url(../img/design.jpg);
+        & .text-holder {
+            border-bottom: $border-bottom $brand-color3;
+        }
+    }
+    .img-holder-4 {
+        background-image: url(../img/developing.jpg);
+        & .text-holder {
+            border-bottom: $border-bottom $brand-color4;
+        }
+    }
+    
+    .text-holder {
+        position: absolute;
+        background: #fff;
+        box-shadow: $box-shadow;
+        display: flex;
+        padding: $padding-Y $padding-X - 120;
+        h3 {
+            margin-bottom: $margin-Y - 10;
+        }
+    }
+    .text-holder-1-and-3 {
+        left: -70%;
+        right: 70%;
+        top: -15%;
+    }
+    .text-holder-2-and-4 {
+        right: -70%;
+        left: 70%;
+        top: -15%;
+    }
+    .numbers span {
+        color: $title-numbers-color;
+        font-size: 2.5rem;
+        margin-right: $margin-X + 10;
+        position: relative;
+    }
+    .numbers span::before {
+        content: ' ';
+        background-color: $title-numbers-color;
+        position: absolute;
+        width: 2px;
+        height: 95px;
+        right: -25px;
+        transform:  rotate(40deg);
+        transform-origin: top;
+    }
+}
+// ===========================================/section7==============================================
+
+// ===========================================section8===============================================
+.container-section-8 {
+    background-color: $bg-color;
+    .cards-wrapper {
+        @include flex-wrap;
+        padding-top: $padding-Y;
+        .cards {
+            @include flex-colum-center;
+            flex-basis: $flex-basis-X + 9;
+            box-shadow: $box-shadow;
+            background-color: #fff;
+            padding: $padding-Y - 20;
+            .price {
+                height: 100px;
+                width: 100px;
+                color: #fff;
+                margin: $margin-Y + 10 0;
+                border: 3px solid white;
+                border-radius: 100px ;
+                @include flex-colum-center;
+                justify-content: center;
+                span:first-child {
+                    font-size: 1.5rem;
+                }
+                span:last-child {
+                    font-size: .7rem;
+                }
+            }
+            span:nth-child(n+3) {
+                margin-bottom: $margin-Y;
+                color: $bg-color-2;
+            }
+            span:nth-child(n+3):nth-child(-n+5) {
+                color: black;
+                font-weight: 500;
+            }
+            span:nth-child(n+3):nth-child(-n+5) span {
+                color: $bg-color-2;
+                font-weight: 400;
+            }
+            .btn {
+                padding: $padding-Y - 35 $padding-X - 115;
+                border-radius: 30px;
+                margin-top: $margin-Y - 10;
+                background-color: #fff;
+                color: blueviolet; 
+            }
+        }
+        .card-1 {
+            border-top: 3px solid $brand-color2;
+            .price {
+                background-color: $brand-color2;
+                box-shadow: 0px 0px 5px 1px rgba(56,198,149,1);
+            }
+            .btn {
+                color: $brand-color2;
+                border: 2px solid $brand-color2;
+            }
+            .btn:hover {
+                color: #fff;
+                background-color: $brand-color2;
+            }
+        }
+        .card-2 {
+            border-top: 3px solid $brand-color1;
+            .price {
+                background-color: $brand-color1;
+                box-shadow: 0px 0px 5px 1px rgba(252,95,69,1);
+            }
+            .btn {
+                color: $brand-color1;
+                border: 2px solid $brand-color1;
+            }
+            .btn:hover {
+                color: #fff;
+                background-color: $brand-color1;
+            }
+        }
+        .card-3 {
+            border-top: 3px solid $brand-color3;
+            .price {
+                background-color: $brand-color3;
+                box-shadow: 0px 0px 5px 1px rgba(178,124,245,1);
+            }
+            .btn {
+                color: $brand-color3;
+                border: 2px solid $brand-color3;
+            }
+            .btn:hover {
+                color: #fff;
+                background-color: $brand-color3;
+            }
+        }
+    }
+}
+// ===========================================/section8==============================================
+
+// ===========================================section9===============================================
+
+
+
+
+
+
+
+
 
 
 

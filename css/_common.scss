@@ -26,6 +26,7 @@ $brand-color4: #feb960;
 $bg-color: #f7f7f7;
 $bg-color-2: #3f4049;
 $content-color: #272727;
+$title-numbers-color: #f0f0f0;
 
 $box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.5);
 $border-bottom: 3px solid; 
@@ -112,7 +113,7 @@ $flex-basis-X: 23%;
     font-size: 10.5rem;
     font-weight: 900;
     line-height: 83%;
-    color: #f0f0f0;
+    color: $title-numbers-color;
     position: absolute;
     z-index: -1;
     top: 0;

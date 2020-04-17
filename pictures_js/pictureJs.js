@@ -23,10 +23,10 @@ const pictureJS = () => {
 
 		const left = document.createElement('span')
 		left.classList.add('picture-JS-left')
-		left.innerHTML = '&#8656;' //сюди можеш вставити контент
+		left.innerHTML = '<i class="fas fa-chevron-left"></i>' 
 
 		const right = document.createElement('span')
-		right.innerHTML = '&#8656;' //сюди можеш вставити контент
+		right.innerHTML = '<i class="fas fa-chevron-right"></i>' 
 		right.classList.add('picture-JS-right')
 
 		fade.append(left, right, img, counterPicture)

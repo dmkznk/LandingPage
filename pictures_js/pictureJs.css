@@ -1,3 +1,4 @@
+
 /* fade */
 .fade-picture-JS {
   position: fixed;
@@ -23,10 +24,9 @@
 /* counter */
 .counter-picture-JS {
   font-size: 2rem;
-  color: #fff;
+  color: #b27cf5;
   position: absolute;
-  left: 0;
-  top: 0;
+  bottom: 2%;
   margin: 10px;
 }
 /* /counter */
@@ -35,11 +35,10 @@
 /* arrows */
 .picture-JS-left {
   position: absolute;
-  overflow: hidden;
   left: 2%;
   font-size: 2rem;
   cursor: pointer;
-  color: orange;
+  color:  #b27cf5;
   padding: 20px;
 }
 
@@ -48,8 +47,7 @@
   right: 2%;
   font-size: 2rem;
   cursor: pointer;
-  color: orange;
+  color:  #b27cf5;
   padding: 20px;
-  transform: rotate(-180deg);
 }
 /* /arrows */
