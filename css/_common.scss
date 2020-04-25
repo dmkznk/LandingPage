@@ -1,24 +1,18 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+// media
+@mixin respond-to($media) {
+    @if $media == handhelds {
+      @media only screen and (max-width: 479px) { @content;}
+    }
+    @else if $media == wide-handhelds {
+      @media only screen and (max-width: 767px) { @content; }
+    }
+    @else if $media == tablets {
+      @media only screen and (max-width: 959px) { @content; }
+    }
+  }
+// media
 
-html {
-    font-size: 17px;
-    scroll-behavior: smooth;
-}
-
-ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
+// colors
 $brand-color1: #fc5f45;
 $brand-color2: #38c695;
 $brand-color3: #b27cf5;
@@ -33,6 +27,44 @@ $title-numbers-color: #f0f0f0;
 $box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.5);
 $border-bottom: 3px solid; 
 
+@mixin gradient {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, $brand-color1 25%, $brand-color2 25%, $brand-color2 50%, $brand-color3 50%, $brand-color3 75%, $brand-color4 75%);
+}
+// /colors
+
+// global sittings
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+    @include respond-to(wide-handhelds) {
+    font-size: 14px;
+
+    }
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 h2, h3 {
     color: $title-color;
     margin: 0;
@@ -42,7 +74,9 @@ p {
     color: $content-color;
     margin: 0;
 }
+// /global sittings
 
+// indints and sizes
 $padding-Y: 50px;
 $padding-X: 150px;
 
@@ -50,7 +84,9 @@ $margin-Y: 20px;
 $margin-X: 20px;
 
 $flex-basis-X: 23%;
+// / indents and sizes
 
+// positions
 @mixin flex-colum-center {
     display: flex;
     flex-direction: column;
@@ -72,28 +108,32 @@ $flex-basis-X: 23%;
     width: 100%;
 }
 
-@mixin  bg-image {
+@mixin bg-image {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
 }
+// /positions
 
-@mixin gradient {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, $brand-color1 25%, $brand-color2 25%, $brand-color2 50%, $brand-color3 50%, $brand-color3 75%, $brand-color4 75%);
-}
-
+// other
 .container {
     @include flex-colum-center;
     position: relative;
     padding: $padding-Y $padding-X;
     z-index: 1;
+    @include respond-to(wide-handhelds) {
+        padding: $padding-Y - 30 $padding-X - 130;
+    }
+}
+
+.logo {
+    font-family: 'Petit Formal Script', cursive;
+    flex-grow: 1;
+    font-size: 1.4rem;
+    line-height: 100%;
+}
+.logo > span {
+    color: $brand-color1;
 }
 
 .fade {
@@ -109,6 +149,14 @@ $flex-basis-X: 23%;
 .global-title {
     font-size: 1.3rem;
     padding: $padding-Y 0 $padding-Y - 20 0;
+    @include respond-to(wide-handhelds) {
+    padding: $padding-Y - 30 0 $padding-Y - 40 0;
+    font-size: 1.1rem;
+    }
+}
+
+.global-title-p {
+    text-align: center;
 }
 
 .global-title-numbers {
@@ -121,6 +169,9 @@ $flex-basis-X: 23%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    @include respond-to(wide-handhelds) {
+    font-size: 5rem;
+    }
 }
 
 .global-btn {
@@ -130,6 +181,9 @@ $flex-basis-X: 23%;
     font-size: .8rem;
     font-weight: 500;
     text-transform: uppercase;
+    @include respond-to(wide-handhelds) {
+    padding: 9px 25px;
+    }
 }
 
 .up {
@@ -140,6 +194,7 @@ $flex-basis-X: 23%;
     z-index: 99;
     font-size: 2rem;
 }
+// /other
 
 //custom radio button
 input[type='radio'],
@@ -181,6 +236,7 @@ input[type='radio']:checked::after {
   transform: translate(-50%, -50%);
   visibility: visible;
 }
+// /custom radio button
 
 
 

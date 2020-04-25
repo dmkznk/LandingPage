@@ -1,10 +1,13 @@
 @import "./common";
 
+
 body {
     font-family: 'Roboto', sans-serif;
+   
 }
-// mobile-menu
-.menu-colum {
+
+  // mobile-menu
+  .menu-colum {
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -39,17 +42,10 @@ body {
 
 // ===========================================header================================================
 header  {
+    
     @include flex-row-center;
     padding: $padding-Y - 35 $padding-X;
-    .logo {
-        font-family: 'Petit Formal Script', cursive;
-        flex-grow: 1;
-        font-size: 1.4rem;
-        line-height: 100%;
-    }
-    .logo > span {
-        color: $brand-color1;
-    }
+   
     ul {
         @include flex-row-center;
     }
@@ -58,6 +54,10 @@ header  {
         font-size: .8rem;
         font-weight: 500;
         margin: 0 $margin-X - 10;
+    }
+
+    @include respond-to(tablets) {
+        display: none;
     }
 }
 // ===========================================/header===============================================
@@ -74,6 +74,10 @@ header  {
         font-weight: 400;
         color: #fff;
         white-space: pre;
+        @include respond-to(wide-handhelds) {
+        font-size: 1.7rem;
+
+        }
     }
     .global-btn {
         margin: $margin-Y +30 0;
@@ -82,12 +86,22 @@ header  {
         @include flex-row-center;
         justify-content: space-around;
         width: 60%;
+        @include respond-to(wide-handhelds) {
+        width: 80%;
+        }
         .main-icon-content {
             @include flex-colum-center;
             font-size: 1.1rem;
+            @include respond-to(wide-handhelds) {
+                font-size: 1rem;
+                text-align: center;
+            }
             i {
                 margin-bottom: $margin-Y;
                 font-size: 2.5rem;
+                @include respond-to(wide-handhelds) {
+                    font-size: 1.5rem;
+                }
                 }
             }
     }
@@ -108,6 +122,8 @@ header  {
     height: 100vh;
     z-index: 100;
     background-color: #fff;
+    display: flex; 
+    flex-flow: wrap;
     .picture-block-section-1 {
         height: 75vh;
         width: 30%;
@@ -116,6 +132,14 @@ header  {
         left: 17%;
         background-image: url(../img/section-1.jpg);
         @include bg-image;
+        @include respond-to(wide-handhelds) {
+             order: 1;
+            height: 40vh;
+            width: 90%;
+            position: relative;
+            left: 0%;
+        }
+        
     }
     .text-block-section-1 {
         width: 40%;
@@ -125,6 +149,13 @@ header  {
         right: 17%;
         background-color: #fff;
         box-shadow: $box-shadow;
+        @include respond-to(wide-handhelds) {
+            order: 0;
+            padding: $padding-Y - 40 $padding-X - 140;
+            width: 90%;
+            position: relative;
+            right: 0%;
+            }
         &:before {
             @include gradient;
         } 
@@ -134,6 +165,11 @@ header  {
         } 
         p {
             margin-bottom: $margin-Y;
+        }
+        p:last-child {
+            @include respond-to(wide-handhelds) {
+                display: none;
+            }
         }
     }
 }
@@ -145,18 +181,35 @@ header  {
     .cards-wrapper_section-2 {
         @include flex-wrap;
         margin: $margin-Y + 30 0;
+        @include respond-to(wide-handhelds) {
+        margin: $margin-Y + 10 0;
+
+        }
         .cards_section-2  {
             @include flex-colum-center;
             text-align: center;
             flex-basis: $flex-basis-X;
             padding: $padding-Y - 30  $padding-X - 135 $padding-Y  $padding-X - 135;
             box-shadow: $box-shadow;
+            @include respond-to(wide-handhelds) {
+            flex-basis: $flex-basis-X + 24;
+            padding: $padding-Y - 40  $padding-X - 140 $padding-Y - 30 $padding-X - 140;
+            margin-bottom: $margin-Y;
+            }
             i {
                 font-size: 2.2rem;
                 padding: $padding-Y - 20 0;
+                @include respond-to(wide-handhelds) {
+                font-size: 2rem;
+                padding: $padding-Y - 40 0;
+                }
             }
             h3 {
                 margin-bottom: $margin-Y;
+                @include respond-to(wide-handhelds) {
+                margin-bottom: $margin-Y - 10;
+
+                }
             }
         }
         .card-1_cards_section-2  {
@@ -294,14 +347,26 @@ header  {
     .cards-wrapper_section-5 {   
         @include flex-wrap;
         margin: $margin-Y + 30 0;
+        @include respond-to(wide-handhelds) {
+        margin: $margin-Y 0 $margin-Y - 20 0;
+        }
         .cards_section-5 {
             @include flex-colum-center;
             flex-basis: $flex-basis-X;
             box-shadow: $box-shadow;
+            @include respond-to(wide-handhelds) {
+            flex-basis: $flex-basis-X + 23;
+            margin-bottom: $margin-Y;
+
+            }
             .team-member-avatar {
                 height: 30vh;
                 width: 100%;
                 @include bg-image;
+                @include respond-to(wide-handhelds) {
+                height: 25vh;
+
+                }
             }
             .team-member-avatar-1 {
                 background-image: url(../img/avatar-1.jpg);
@@ -320,12 +385,21 @@ header  {
                 width: 100%;
                 padding: $padding-Y - 35 0;
                 background-color: #fff;
+
                 span:first-child {
                     font-size: 1.2rem;
                     margin-bottom: $margin-Y - 15;
+                    text-align: center;
+                    @include respond-to(wide-handhelds) {
+                    font-size: 1rem;
+                    }
                 }
                 span:last-child {
                     font-size: .8rem;
+                }
+                @include respond-to(wide-handhelds) {
+                padding: $padding-Y - 45 0;
+
                 }
             }
             .team-member-name-wrap_color-1 {
@@ -365,14 +439,21 @@ header  {
         min-height: 35vh;
         width: 100%;
         box-shadow: $box-shadow;
+        @include respond-to(wide-handhelds) {
+        min-height: 45vh;
+
+        }
         .about-members  {
             position: absolute;
-            padding: 50px;
+            padding: $padding-Y;
             left: 0;
             right: 0;
             bottom: 0;
             top: 0;
             display: flex;
+            @include respond-to(wide-handhelds) {
+                padding: $padding-Y - 40;
+            }
             .text-block  {
                 position: relative;
                 @include flex-colum-center;
@@ -384,6 +465,9 @@ header  {
                   }
                 p {
                     width: 75%;
+                    @include respond-to(wide-handhelds) {
+                    width: 100%;
+                    }
                 }
                 
             }
@@ -417,7 +501,10 @@ header  {
                       color: $content-color;
                   }
                 }
+                ///// do not forget
+                display: none;
               }
+             
         }
 
         .about-member-1 {
@@ -569,12 +656,20 @@ header  {
     .cards-wrapper {
         @include flex-wrap;
         padding-top: $padding-Y;
+        @include respond-to(wide-handhelds) {
+            justify-content: center;
+        }
         .cards {
             @include flex-colum-center;
             flex-basis: $flex-basis-X + 9;
             box-shadow: $box-shadow;
             background-color: #fff;
             padding: $padding-Y - 20;
+            @include respond-to(wide-handhelds) {
+            flex-basis: $flex-basis-X + 70;
+            margin-bottom: $margin-Y;
+            padding: $padding-Y - 30;
+            }
             .price {
                 height: 100px;
                 width: 100px;
@@ -590,10 +685,17 @@ header  {
                 span:last-child {
                     font-size: .7rem;
                 }
+                @include respond-to(wide-handhelds) {
+                margin: $margin-Y - 5 0;
+
+                }
             }
             span:nth-child(n+3) {
                 margin-bottom: $margin-Y;
                 color: $bg-color-2;
+                @include respond-to(wide-handhelds) {
+                margin-bottom: $margin-Y - 10;
+                }
             }
             span:nth-child(n+3):nth-child(-n+5) {
                 color: black;
@@ -814,17 +916,32 @@ header  {
         margin: $margin-Y 0;
         .blocks {
             flex-basis: $flex-basis-X + 7;
-            margin: $margin-Y +10 0;
+            margin: $margin-Y + 10 0;
+            @include respond-to(wide-handhelds) {
+            flex-basis: $flex-basis-X + 23;
+            margin: $margin-Y - 5 0;
+
+
+            }
             .icon-and-title-holder {
                 display: flex;
                 margin-bottom: $margin-Y;
+                @include respond-to(wide-handhelds) {
+                    margin-bottom: $margin-Y - 15;
+                }
                 i {
                     font-size: 2.2rem;
                     margin-right: $margin-Y - 10;
+                    @include respond-to(wide-handhelds) {
+                    font-size: 1.8rem;
+                    }
                 }
                 h3 {
                     white-space: pre;
                     font-weight: 500;
+                    @include respond-to(wide-handhelds) {
+                        font-size: 1.1rem;
+                    }
                 }
             }
             p {
@@ -849,8 +966,15 @@ header  {
         margin: $margin-Y 0;
         span {
             margin-right: $margin-X;
+            @include respond-to(wide-handhelds) {
+            margin-right: 0;
+            margin-bottom: $margin-Y;
+            }
         }
-    
+        @include respond-to(wide-handhelds) {
+        @include flex-colum-center;
+        margin: 0;
+        }
     }
 
 }
@@ -862,9 +986,16 @@ header  {
     .wrapper {
         @include flex-wrap;
         margin: $margin-Y + 30 0;
+        @include respond-to(wide-handhelds) {
+            justify-content: center;
+            margin: $margin-Y + 10 0 $margin-Y 0;
+        }
         .block-1 {
             flex-basis: 49.25%;
             box-shadow: $box-shadow;
+            @include respond-to(wide-handhelds) {
+            flex-basis: 90%;
+            }
             .img-holder {
                 @include bg-image;
                 background-image: url(../img/graphs.jpg);
@@ -873,6 +1004,10 @@ header  {
                 padding: $padding-Y - 20;
                 background-color: green;
                 display: flex;
+                @include respond-to(wide-handhelds)  {
+                height: 30vh;
+                padding: $padding-Y - 30;
+                }
                 .name {
                     align-self: flex-end;
                     color: $brand-color1;
@@ -894,8 +1029,14 @@ header  {
             flex-basis: 49.25%;
             @include flex-colum-center;
             justify-content: space-between;
+            @include respond-to(wide-handhelds) {
+            flex-basis: 90%;
+            }
             .content {
             box-shadow: $box-shadow;
+            @include respond-to(wide-handhelds) {
+                margin-top: $margin-Y;
+            }
             }
             .content-2 {
                 border-bottom: $border-bottom $brand-color2;
@@ -937,6 +1078,10 @@ header  {
         .content {
             padding: $padding-Y - 20;
             background-color: #fff;
+            @include respond-to(wide-handhelds) {
+            padding: $padding-Y - 30;
+
+            }
             .name > span {
                 margin-left: $margin-X;
             }
@@ -980,13 +1125,160 @@ header  {
 }
 // ===========================================/section12=============================================
 
-// ===========================================last-section===========================================
-.container-last-section {
+// ===========================================footer=================================================
+footer {
     background-color: #CCCCCC;
     .global-title-numbers {
         color: #D3D3D3;
     }
+    .wrapper {
+        @include flex-wrap;
+        width: 50vw;
+        height: 40vh;
+        margin: $margin-Y + 20 0 $margin-Y 0;
+        @include respond-to(wide-handhelds) {
+            justify-content: center;
+            width: 90vw;
+            height: 50vh;
+        margin: $margin-Y 0 $margin-Y 0;
+
+        }
+        input {
+            flex-basis: 48%;
+            height: 45px;
+            text-align: center;
+            border: 1px solid $bg-color;
+            border-radius: 3px;
+            font-size: .8rem;
+            margin: 0;
+            @include respond-to(wide-handhelds) {
+            flex-basis: 90%;
+
+            }
+        }
+        textarea {
+            flex-basis: 100%;
+            text-align: center;
+            border: 1px solid $bg-color;
+            border-radius: 3px;
+            font-size: .8rem;
+            padding-top: 15px;
+            resize: none;
+            height: 20vh;
+            @include respond-to(wide-handhelds) {
+            flex-basis: 90%;
+            height: 15vh;
+            }
+        }
+    }
+    .contacts {
+        @include flex-wrap;
+        justify-content: space-around;
+        background-color: $bg-color-2;
+        padding: $padding-Y 0;
+        margin: $margin-Y + 60 0 $margin-Y 0;
+        position: relative;
+        @include respond-to(wide-handhelds) {
+        margin: $margin-Y 0 0 0;
+        padding: $padding-Y - 30 0;
+        display: flex;
+        flex-flow: wrap;
+        }
+        &:before {
+            @include gradient;
+            z-index: 1;
+        } 
+        .blocks {
+            flex-basis: 15%;
+            @include respond-to(wide-handhelds) {
+            flex-basis: 40%;
+            }
+        }
+        .block-1 {
+            @include flex-colum-center;
+            @include respond-to(wide-handhelds) {
+                order: 0;
+                margin-bottom: $margin-Y;
+            }
+            .logo {
+                flex-grow: 0;
+                color: #fff;
+                font-size: 2.5rem;
+                @include respond-to(wide-handhelds) {
+                font-size: 2rem;
+                align-self: flex-start;
+                }
+
+            }
+        }
+        .block-2, .block-3 {
+            p {
+                color: #fff;
+                white-space: pre;
+                font-size: .9rem;
+                margin-top: $margin-Y;
+                @include respond-to(wide-handhelds) {
+                margin-top: $margin-Y - 10;
+                font-size: .8rem;
+
+                }
+            }
+        }
+        .block-2 {
+            @include respond-to(wide-handhelds) {
+                order: 2;
+            }
+        }
+        .block-3 {
+            @include respond-to(wide-handhelds) {
+                order: 3;
+            }
+        }
+        .block-2 > span {
+            color: $brand-color2;
+        }
+        .block-3 > span {
+            color: $brand-color3;
+        }
+        .block-4 {
+            @include respond-to(wide-handhelds) {
+                order: 1;
+                margin-bottom: $margin-Y;
+            }
+            ul {
+                display: flex;
+                margin-top: $margin-Y;
+                @include respond-to(wide-handhelds) {
+                    margin-top: $margin-Y - 10;
+                  
+                    }
+                li {
+                    margin-right: $margin-X - 10;
+                    a i {
+                        font-size: 1.8rem;
+                        @include respond-to(wide-handhelds) {
+                        font-size: 1.4rem;
+
+                        }
+                        
+                    }
+                }
+            }
+            span {
+                color: $brand-color4;
+                @include respond-to(wide-handhelds) {
+                    display: none;;
+                }
+            }
+        }
+    }
 }
+
+
+// ===========================================/footer=================================================
+
+
+
 
 
 
